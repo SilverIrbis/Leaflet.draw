@@ -391,6 +391,11 @@ L.Edit.PolyVerticesEdit = L.Handler.extend({
 
 		marker.setOpacity(0.6);
 
+		marker.setIcon(new L.DivIcon({
+			iconSize: new L.Point(20, 20),
+			className: ' leaflet-div-icon leaflet-editing-icon leaflet-touch-icon leaflet-translucent-marker'
+		}));
+
 		marker1._middleRight = marker2._middleLeft = marker;
 
 		onDragStart = function () {
@@ -425,6 +430,8 @@ L.Edit.PolyVerticesEdit = L.Handler.extend({
 
 			this._createMiddleMarker(marker1, marker);
 			this._createMiddleMarker(marker, marker2);
+
+			marker._icon.classList.remove('leaflet-translucent-marker');
 		};
 
 		onClick = function () {
