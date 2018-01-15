@@ -315,3 +315,11 @@
 .leaflet-oldie .leaflet-draw-toolbar {
     border: 1px solid #999;
 }
+
+.leaflet-editing-icon {
+    background-color:#ff0000;
+}
+
+.leaflet-translucent-marker {
+    background-color:#ffffff;
+}
